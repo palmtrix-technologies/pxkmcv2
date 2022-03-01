@@ -43,10 +43,9 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($campaigns as $campaign) { ?>
 
                                                 <tr>
-                                                    <td><?php echo $campaign-></td>
+                                                    <td>Campaign name</td>
                                                     <td>10-Mar-2022 - 10-mar-2022</td>
                                                     <td>1000 </td>
                                                     <td>10 AED</td>
@@ -58,7 +57,6 @@
                                                             <a href="#" data-toggle="tooltip" data-original-title="View"> <i class="icon-eye text-danger"></i> </a>
                                                         </td></td>
                                                 </tr>
-                                                <?php } ?>
                                             </tbody>
                                         </table>
                                     </div>

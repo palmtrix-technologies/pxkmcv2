@@ -28,16 +28,16 @@
                                                 <li class="nav-item">
                                                     <ul class="nav flex-column">
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="signup.html">State Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/state">State Master</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="signup-simple.html">District Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/district">District Master</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="signup-simple.html">Mandalam Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/mandalam">Mandalam Master</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="signup-simple.html">Panjayath Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/panjayathu">Panjayath Master</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -51,13 +51,13 @@
                                                 <li class="nav-item">
                                                     <ul class="nav flex-column">
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="login.html">Emarates Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/emarates">Emarates Master</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="login-simple.html">Area Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/area">Area Master</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="login-simple.html">District Master</a>
+                                                        <a class="nav-link" href="<?php echo base_url(); ?>/zone">Zone Master</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -70,14 +70,14 @@
                                             <ul id="recover_drp" class="nav flex-column collapse collapse-level-2">
                                                 <li class="nav-item">
                                                     <ul class="nav flex-column">
-                                                                <li class="nav-item">
-                                                        <a class="nav-link" href="calendar.html">Profession</a>
+                                                    <li class="nav-item">
+                                                    <a class="nav-link" href="<?php echo base_url(); ?>/profession">Profession</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="email.html">Qualifications</a>
+                                                    <a class="nav-link" href="<?php echo base_url(); ?>/qualifications">Qualifications</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="file-manager.html">Welfare Scheme</a>
+                                                    <a class="nav-link" href="<?php echo base_url(); ?>/welfare">Welfare Scheme</a>
                                                     </li>
                                                     </ul>
                                                 </li>

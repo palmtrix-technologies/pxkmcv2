@@ -104,3 +104,42 @@ $route['campaign-add'] = 'Admin/Campaign/add';
 $route['campaign-store'] = 'Admin/Campaign/add_campaign';
 $route['addcampaign-quota'] = 'Admin/Campaign/addcampaign_quota';
 
+$route['state'] = 'Admin/Master/index';
+$route['newstate'] = 'Admin/Master/newstate';
+$route['Add_state'] = 'Admin/Master/addstate';
+
+$route['district'] = 'Admin/Master/district';
+$route['newdistrict'] = 'Admin/Master/newdistrict';
+$route['Add_district'] = 'Admin/Master/addistrict';
+
+$route['mandalam'] = 'Admin/Master/mandalam';
+$route['newmandalam'] = 'Admin/Master/newmandalam';
+$route['Add_mandalam'] = 'Admin/Master/addmandalam';
+
+$route['panjayathu'] = 'Admin/Master/panjayathu';
+$route['newpanjayath'] = 'Admin/Master/newpanjayath';
+$route['Add_panjayath'] = 'Admin/Master/addpanjayath';
+
+$route['emarates'] = 'Admin/Master/emarates';
+$route['newemirates'] = 'Admin/Master/newemirates';
+$route['Add_emirates'] = 'Admin/Master/addemirates';
+
+$route['area'] = 'Admin/Master/area';
+$route['newarea'] = 'Admin/Master/newarea';
+$route['Add_area'] = 'Admin/Master/addarea';
+
+$route['zone'] = 'Admin/Master/zone';
+$route['newzone'] = 'Admin/Master/newzone';
+$route['Add_zone'] = 'Admin/Master/addzone';
+
+$route['profession'] = 'Admin/Master/profession';
+$route['newprofession'] = 'Admin/Master/newprofession';
+$route['Add_profession'] = 'Admin/Master/addprofession';
+
+$route['qualifications'] = 'Admin/Master/qualifications';
+$route['newqualification'] = 'Admin/Master/newqualification';
+$route['Add_qualification'] = 'Admin/Master/addqualification';
+
+$route['welfare'] = 'Admin/Master/welfare';
+$route['newwelfare'] = 'Admin/Master/newwelfare';
+$route['Add_welfare'] = 'Admin/Master/addwelfare';

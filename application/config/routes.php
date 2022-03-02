@@ -92,7 +92,7 @@ $route['edit-membership-step4/(:num)'] = 'Agent/Membership/edit_membership_step_
 $route['membership-step4-edit'] = 'Agent/Membership/EditStep4';
 $route['edit-membership-step5/(:num)'] = 'Agent/Membership/edit_membership_step_5/$1';
 $route['membership-step5-edit'] = 'Agent/Membership/EditStep5';
-
+$route['members-list'] = 'Agent/Membership/index';
 
 
 // admin

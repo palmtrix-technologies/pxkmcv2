@@ -176,7 +176,7 @@ $(function(){
              cache:false,
              async:false,
               success: function(response){
-                  alert('Membership details edited successfully');
+                  alert('Membership details updated successfully');
               return false;
            }
          });

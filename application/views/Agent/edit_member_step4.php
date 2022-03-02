@@ -136,7 +136,7 @@ $(function(){
              cache:false,
              async:false,
               success: function(data){
-                  console.log(data);
+                window.location.href = "<?php echo base_url('edit-membership-step5') ?>/" + data;  
               return false;
            }
          });

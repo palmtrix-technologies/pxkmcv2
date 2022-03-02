@@ -14,51 +14,51 @@ const bullet = document.querySelectorAll(".step .bullet");
 let max =4;
 let current =1;
 
-firstNextBtn.addEventListener("click",function(){
-    slidepage.style.marginLeft = "-25%";
-    bullet[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progessCheck[current - 1].classList.add("active");
+// firstNextBtn.addEventListener("click",function(){
+//     slidepage.style.marginLeft = "-25%";
+//     bullet[current - 1].classList.add("active");
+//     bullet[current - 1].classList.add("active");
+//     progessCheck[current - 1].classList.add("active");
     
-    current += 1;
-});
+//     current += 1;
+// });
 
-NextBtnSec.addEventListener("click",function(){
-    slidepage.style.marginLeft = "-50%";
-    bullet[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progessCheck[current - 1].classList.add("active");
+// NextBtnSec.addEventListener("click",function(){
+//     slidepage.style.marginLeft = "-50%";
+//     bullet[current - 1].classList.add("active");
+//     bullet[current - 1].classList.add("active");
+//     progessCheck[current - 1].classList.add("active");
     
-    current += 1;
-});
+//     current += 1;
+// });
 
-NextBtnThird.addEventListener("click",function(){
-    slidepage.style.marginLeft = "-75%";
-    bullet[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progessCheck[current - 1].classList.add("active");
+// NextBtnThird.addEventListener("click",function(){
+//     slidepage.style.marginLeft = "-75%";
+//     bullet[current - 1].classList.add("active");
+//     bullet[current - 1].classList.add("active");
+//     progessCheck[current - 1].classList.add("active");
    
-    current += 1;
-});
-NextBtnFourth.addEventListener("click",function(){
-    slidepage.style.marginLeft = "-100%";
-    bullet[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progessCheck[current - 1].classList.add("active");
+//     current += 1;
+// });
+// NextBtnFourth.addEventListener("click",function(){
+//     slidepage.style.marginLeft = "-100%";
+//     bullet[current - 1].classList.add("active");
+//     bullet[current - 1].classList.add("active");
+//     progessCheck[current - 1].classList.add("active");
    
-    current += 1;
-});
+//     current += 1;
+// });
 
-submitBtn.addEventListener("click",function(){
-    bullet[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progessCheck[current - 1].classList.add("active");
+// submitBtn.addEventListener("click",function(){
+//     bullet[current - 1].classList.add("active");
+//     bullet[current - 1].classList.add("active");
+//     progessCheck[current - 1].classList.add("active");
     
-    current += 1;
-    setTimeout(function(){
-        alert("You're Succesfuly Signed Up")
+//     current += 1;
+//     setTimeout(function(){
+//         alert("You're Succesfuly Signed Up")
         
-    }, 800);
-});
+//     }, 800);
+// });
 
 

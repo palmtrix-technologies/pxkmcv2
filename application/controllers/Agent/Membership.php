@@ -23,11 +23,10 @@ class Membership extends CI_Controller {
 	}
 	public function index()
 	{
+
+		$data['membership'] = $this->Model_membership->get_all_member_data();
 		
-		$states = $this->Model_state->getall_states();
-        $this->data['states'] = $states;
- 
-		$this->load->view('membership/membership-add' , $data);
+		$this->load->view('Agent/list_all_members' , $data);
 	}
 
 	public function add_membership_step_1()
@@ -316,92 +315,12 @@ public function edit_membership_step_1($id)
 	{
 		$data['membership']  = $this->Model_membership->get_member_details($id);
  
+		
 		$this->load->view('Agent/edit_member_step1', $data);
 	}
 
 public function EditStep1(){
 
-$isvalidemaratesid=false;
-		$isvalidemaratesname=false;
-		if(!empty($_FILES['picture']['name'])){
-		$config['upload_path'] = 'uploads/images/';
-        $config['allowed_types']='gif|jpg|png|jpeg';
-        $this->load->library('upload',$config);
-        if($this->upload->do_upload("picture")){
-        $data = array('upload_data' => $this->upload->data());
-       
-		$row = new stdClass();
-	  
-	   $vision = new VisionClient([
-		   'projectId' => 'quiet-vector-340708',
-		   'keyFilePath' => __DIR__ . '/../quiet-vector-340708-ba8a552a2cf5.json'
-	   ]);
-	  
-	   $image ="http://localhost/kmcc/uploads/images/".$data['upload_data']['file_name'];
-	   
-	   $image = $vision->image(
-	    fopen($image,'r'),
-		   ['text']
-		   
-	   );
-	  $emirates_id=$_POST['emirates_id'];
-	  $emirates_name=$_POST['emirates_name'];
-	  $tadaa = $vision->annotate($image);
-	   $abcd=(Array)$tadaa->text();
-	   $mngo =$abcd[0];
-	   $abc=(Array)$mngo;
-	 
-	  
-   foreach ($abc as $key => $value) {
-	
-	  if(strpos($value['description'], $emirates_name) !== false)
-	   {
-		$isvalidemaratesname=true;
-	   }
-	   else 
-		{
-			$isvalidemaratesname=false;
-		}
-
-		if(strpos($value['description'], $emirates_id) !== false)
-		{
-		 $isvalidemaratesid=true;
-		}
-	    else 
-		 {
-			 $isvalidemaratesid=false;
-		 }
-
-		 $data = [
-            'isvalidemaratesidnumber' => $isvalidemaratesid,
-            'isvalidemaratesname' => $isvalidemaratesname,
-			'error'=>false,
-			'errortext'=>''
-        ];
-
-		echo json_encode( $data );
-	}
-        }
-		else{
-			$data = [
-				'isvalidemaratesidnumber' => $isvalidemaratesid,
-				'isvalidemaratesname' => $isvalidemaratesname,
-				'error'=>true,
-				'errortext'=>$this->upload->display_errors()
-			];
-			echo json_encode( $data );
-			
-		}
-	 }
-	 else{
-		$data = [
-			'isvalidemaratesidnumber' => $isvalidemaratesid,
-			'isvalidemaratesname' => $isvalidemaratesname,
-			'error'=>true,
-			'errortext'=>'dummy'
-		];
-		echo json_encode( $data );
-	 }
 
                    $memberdata = array(
                     	'full_name' => $this->input->post('emirates_name'),
@@ -410,10 +329,9 @@ $isvalidemaratesid=false;
                         'mobile_number' => $this->input->post('mobile_number')
                         //'picture' => $image
                       );
-$id = $this->input->post('member_id');
- $result= $this->Model_membership->update_membership($memberdata,$id);     
- echo $result;   
- redirect('edit/membership-step2/(:num)', 'refresh');          
+					$id = $this->input->post('member_id');
+					$result= $this->Model_membership->update_membership($memberdata,$id);     
+					echo $id;            
 }
 public function edit_membership_step_2($id)
 	{
@@ -438,8 +356,7 @@ $id = $this->input->post('id');
 					'blood_group' => $this->input->post('blood_group')
 				);
  $result= $this->Model_membership->update_member_basic_details($basic_details,$id);     
- echo $result; 
-redirect('edit/membership-step3/(:num)', 'refresh'); 
+ echo $id; 
 }
 
 public function edit_membership_step_3($id)
@@ -479,9 +396,9 @@ $id = $this->input->post('id');
 				);
  $result= $this->Model_membership->update_member_indian_details($member_indian_details,$id);     
  
- echo $result; 
+ echo $id; 
 
-redirect('edit/membership-step4/(:num)', 'refresh'); 
+// redirect('edit/membership-step4/(:num)', 'refresh'); 
 }
 
 public function edit_membership_step_4($id)
@@ -505,8 +422,8 @@ $id = $this->input->post('id');
 					'welfare_scheme_name' => $this->input->post('welfare_scheme_name')
 				);
  $result= $this->Model_membership->update_member_other_details($other_details,$id);     
- echo $result; 
-redirect('edit/membership-step5/(:num)', 'refresh'); 
+ echo $id; 
+// redirect('edit/membership-step5/(:num)', 'refresh'); 
 }
 
 public function edit_membership_step_5($id)
@@ -540,8 +457,8 @@ $id = $this->input->post('id');
 					'logged_person' => $this->input->post('logged_person')
 				);
  $result= $this->Model_membership->update_member_committee_details($branch_committe_details,$id);     
- echo $result; 
-redirect('edit/membership-step1/(:num)', 'refresh'); 
+ echo $id; 
+// redirect('edit/membership-step1/(:num)', 'refresh'); 
 }
 
 

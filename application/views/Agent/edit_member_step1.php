@@ -96,7 +96,7 @@
                                     <option value="on"></option>
                                 </select>
                         </div> <br>                                               
-                        <div class="" style="display:inline-flex;margin-bottom: -30px;margin-top: 40px;left:50%;transform: translateX(-30%);">
+                        <div class="" style="display:none;margin-bottom: -30px;margin-top: 40px;left:50%;transform: translateX(-30%);">
                             <button class="upload-button1" style="height: 43px;width: 150px;font-size: 6px;line-height: 30px;border-color: #388e3c;background-color: #e8f5e9;border-radius: 10px;">            
                             
                              <label for="myfile" style="color: #388e3c;">Front Side</label>
@@ -160,7 +160,7 @@ $(function(){
              async:false,
               success: function(response){
 
-                  console.log(data);
+                window.location.href = "<?php echo base_url('edit-membership-step2') ?>/" + response;  
               
            }
          });

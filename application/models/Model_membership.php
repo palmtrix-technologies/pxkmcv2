@@ -25,6 +25,13 @@ class Model_membership extends CI_Model
             return false;    
         }
     }
+
+    public function get_all_member_data(){
+
+        $sql = "SELECT * FROM membership ORDER BY member_id ASC  ";
+                     $query = $this->db->query($sql);
+                     return $query->result_array();
+     }
 public function get_member_id(){
 
 

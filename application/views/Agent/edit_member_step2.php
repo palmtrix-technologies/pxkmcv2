@@ -186,7 +186,7 @@ $(function(){
              cache:false,
              async:false,
               success: function(data){
-                  var result = JSON.parse(data)
+                  window.location.href = "<?php echo base_url('edit-membership-step3') ?>/" + data;  
               return false;
            }
          });
